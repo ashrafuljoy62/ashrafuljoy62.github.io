@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>MSR Sakibur | Links & Portfolio</title>
+    <meta name="title" content="MSR Sakibur | MD Sakibur Rahman | Links & Portfolio">
+    <meta name="description" content="Official link tree and portfolio of MSR Sakibur (MD Sakibur Rahman). Full Stack Developer, Tech Enthusiast, and Open Source Contributor.">
+    <meta name="keywords" content="MSR Sakibur, msrsakibur, Sakibur msr, msr sakibur, msr.sakibur, msrofficial, MD Sakibur Rahman, sakibur.msr, MSR-PatcH, Full Stack Developer">
+    <meta name="author" content="MSR Sakibur">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://msrofficial.github.io/">
+    <meta property="og:title" content="MSR Sakibur | MD Sakibur Rahman">
+    <meta property="og:description" content="Full Stack Developer & Tech Enthusiast. Check out my portfolio, GitHub, and social links.">
+    <meta property="og:image" content="https://ui-avatars.com/api/?name=MSR&background=random&size=512">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "MD Sakibur Rahman",
+      "alternateName": ["MSR Sakibur", "MSR", "msrofficial", "msrsakibur", "Sakibur msr"],
+      "url": "https://msrofficial.github.io/",
+      "jobTitle": "Full Stack Developer"
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* Modern Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: #050505;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Ambient Glow */
+        .bg-glow {
+            position: fixed;
+            top: -10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle at top, rgba(45, 55, 72, 0.15) 0%, rgba(5, 5, 5, 1) 60%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            z-index: 1;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .profile-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 16px;
+            border: 3px solid rgba(255, 255, 255, 0.08);
+            background-image: url('https://ui-avatars.com/api/?name=MSR&background=111&color=fff&size=128');
+            background-size: cover;
+            background-position: center;
+            display: inline-block;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #ffffff, #a0a0a0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bio {
+            color: #999;
+            font-size: 14px;
+            line-height: 1.5;
+   }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 14px;
+            color: #fff;
+            font-weight: 600;
+            margin: 32px 0 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .section-title i {
+            color: #777;
+        }
+
+        /* Grid Links Section */
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        /* The main portfolio link takes full width */
+        .link-full {
+            grid-column: span 2;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(10px);
+            padding: 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #eee;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.2s ease;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .link-full .link-card {
+            justify-content: space-between;
+            padding: 18px 24px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .link-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .link-card i {
+            font-size: 18px;
+        }
+
+        .link-full .link-card i:first-child {
+            margin-right: 8px;
+        }
+
+        /* GitHub Repos Section */
+        .repo-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .repo-item {
+            display: block;
+            text-decoration: none;
+            background: rgba(20, 20, 20, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 16px;
+            border-radius: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .repo-item:hover {
+            background: rgba(30, 30, 30, 0.8);
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .repo-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .repo-name {
+            color: #58a6ff;
+            font-size: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .repo-stars {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .repo-stars i { color: #e3b341; }
+
+        .repo-desc {
+            color: #8b949e;
+            font-size: 13px;
+            margin-bottom: 12px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            line-height: 1.4;
+        }
+
+        .repo-lang {
+            font-size: 12px;
+            color: #8b949e;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .lang-color {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .loader {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 13px;
+            color: #444;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+
+    <div class="container">
+        
+        <header>
+            <div class="profile-img"></div>
+            <h1>MSR Sakibur</h1>
+            <p class="bio">Developer & Content Creator<br>Tech Enthusiast | Anime | Code</p>
+        </header>
+
+        <div class="links-grid">
+            
+            <div class="link-full">
+                <a href="https://msrsakibur.site" target="_blank" class="link-card">
+                    <div>
+                        <i class="fa-solid fa-globe"></i>
+                        <span>Portfolio Website</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right" style="font-size: 14px; color: #666;"></i>
+                </a>
+            </div>
+
+            <a href="https://github.com/msrofficial" target="_blank" class="link-card">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+
+            <a href="https://youtube.com/@msr.sakibur" target="_blank" class="link-card">
+                <i class="fa-brands fa-youtube" style="color: #ff4d4d;"></i> YouTube
+            </a>
+
+            <a href="https://facebook.com/sakibur.msr" target="_blank" class="link-card">
+                <i class="fa-brands fa-facebook" style="color: #1877f2;"></i> Facebook
+            </a>
+
+            <a href="https://instagram.com/msr.sakibur" target="_blank" class="link-card">
+                <i class="fa-brands fa-instagram" style="color: #e1306c;"></i> Instagram
+            </a>
+
+            <a href="https://x.com/msrsakibur" target="_blank" class="link-card">
+                <i class="fa-brands fa-x-twitter"></i> X (Twitter)
+            </a>
+
+            <a href="https://threads.net/@msr.sakibur" target="_blank" class="link-card">
+                <i class="fa-brands fa-threads"></i> Threads
+            </a>
+
+            <a href="https://t.me/msr0official" target="_blank" class="link-card">
+                <i class="fa-brands fa-telegram" style="color: #0088cc;"></i> Telegram
+            </a>
+
+            <a href="https://t.me/msrpatch" target="_blank" class="link-card">
+                <i class="fa-brands fa-telegram" style="color: #0088cc;"></i> Telegram Channel
+            </a>
+
+        </div>
+
+        <div class="section-title">
+            <i class="fa-solid fa-fire-flame-curved"></i> Top Repositories
+        </div>
+        
+        <div class="repo-list" id="repo-list">
+            <div class="loader"><i class="fa-solid fa-spinner fa-spin"></i> Fetching top repos...</div>
+        </div>
+
+        <footer>
+            © 2026 MSR Sakibur
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            const username = 'msrofficial';
+            const repoList = document.getElementById('repo-list');
+
+            try {
+                // Fetch up to 100 repos to ensure we get the absolute top starred ones
+                const response = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
+                let repos = await response.json();
+
+                // Sort by stars descending and take the top 3
+                repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
+                const topRepos = repos.slice(0, 3);
+
+                repoList.innerHTML = ''; // Clear loader
+
+                if (topRepos.length > 0) {
+                    topRepos.forEach(repo => {
+                        // Determine language color
+                        let langColor = "#8b949e";
+                        if(repo.language === "JavaScript") langColor = "#f1e05a";
+                        if(repo.language === "HTML") langColor = "#e34c26";
+                        if(repo.language === "CSS") langColor = "#563d7c";
+                        if(repo.language === "Python") langColor = "#3572A5";
+                        if(repo.language === "Java") langColor = "#b07219";
+
+                        repoList.innerHTML += `
+                            <a href="${repo.html_url}" target="_blank" class="repo-item">
+                                <div class="repo-header">
+                                    <div class="repo-name">
+                                        <i class="fa-regular fa-folder-open"></i> ${repo.name}
+                                    </div>
+                                    <div class="repo-stars">
+                                        <i class="fa-solid fa-star"></i> ${repo.stargazers_count}
+                                    </div>
+                                </div>
+                                <div class="repo-desc">${repo.description || 'No description provided.'}</div>
+                                <div class="repo-lang">
+                                    <div class="lang-color" style="background-color: ${langColor}"></div>
+                                    ${repo.language || 'Code'}
+                                </div>
+                            </a>
+                        `;
+                    });
+                } else {
+                    repoList.innerHTML = '<div class="loader">No public repositories found.</div>';
+                }
+
+            } catch (error) {
+                console.error("Error fetching GitHub Data:", error);
+                repoList.innerHTML = '<div class="loader">Could not load repositories.</div>';
+            }
+        });
+    </script>
+
+</body>
+</html>
+
